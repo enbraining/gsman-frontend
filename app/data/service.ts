@@ -1,5 +1,5 @@
 export interface ServiceDetail {
-  id: number;
+  id: string;
   name: string;
   group: string;
   description: string;
@@ -16,7 +16,7 @@ export interface ServiceDetail {
 
 export const services: ServiceDetail[] = [
   {
-    id: 1,
+    id: "sms",
     name: "SMS",
     group: "MSG",
     description: "Student Management Service",
@@ -37,7 +37,7 @@ export const services: ServiceDetail[] = [
     },
   },
   {
-    id: 2,
+    id: "gauth",
     name: "GAuth",
     group: "MSG",
     description: "교내 계정 통합 소셜 로그인 서비스",
@@ -58,7 +58,7 @@ export const services: ServiceDetail[] = [
     },
   },
   {
-    id: 3,
+    id: "dotori",
     name: "Dotori",
     group: "Empersand",
     description: "Dotori, Dormitory를 담다.",
