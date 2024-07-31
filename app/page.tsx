@@ -7,7 +7,7 @@ import {
   MdiWeb,
   MingcuteGithub2Fill,
   SearchStatusIcon,
-} from "./components/icons";
+} from "./components/Icons";
 import { services } from "./data/service";
 
 const WithGradient = styled.div`
@@ -66,7 +66,9 @@ export default function Home() {
       <div className="grid mx-auto w-5/6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {services
           .filter((service) =>
-            service.name.toLowerCase().includes(search.toLowerCase())
+            `${service.name}${service.group}${service.description}`
+              .toLowerCase()
+              .includes(search.toLowerCase())
           )
           .map((service) => (
             <div
