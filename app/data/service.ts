@@ -15,4 +15,12 @@ export const services = [
     siteUrl: "https://gauth.co.kr",
     githubUrl: "https://github.com/GSM-MSG/GAuth-FrontEnd",
   },
+  {
+    id: 3,
+    name: "Dotori",
+    group: "Empersand",
+    description: "Dotori, Dormitory를 담다.",
+    siteUrl: "https://www.dotori-gsm.com",
+    githubUrl: "https://github.com/Team-Ampersand/Dotori-client-v2",
+  },
 ];
