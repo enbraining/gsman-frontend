@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MdiHumanHandsup } from "./Icons";
+import { MdiHumanHandsup } from "./icons";
 
 export default function Header() {
   return (

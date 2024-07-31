@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { MdiWeb, MingcuteGithub2Fill } from "../components/Icons";
+import { MdiWeb, MingcuteGithub2Fill } from "../components/icons";
 import { ServiceDetail, services } from "../data/service";
 
 const WithGradient = styled.div`

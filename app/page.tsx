@@ -7,7 +7,7 @@ import {
   MdiWeb,
   MingcuteGithub2Fill,
   SearchStatusIcon,
-} from "./components/Icons";
+} from "./components/icons";
 import { services } from "./data/service";
 
 const WithGradient = styled.div`
