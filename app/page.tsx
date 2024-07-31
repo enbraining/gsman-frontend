@@ -13,7 +13,7 @@ import { services } from "./data/service";
 const WithGradient = styled.div`
   background-image: url("/main-banner.png");
   background-size: cover;
-  padding: 4rem 0;
+  padding: 9rem 0 5rem 0;
   color: white;
   margin-bottom: 4rem;
   text-align: center;
@@ -71,7 +71,8 @@ export default function Home() {
               .includes(search.toLowerCase())
           )
           .map((service) => (
-            <div
+            <Link
+              href={`/${service.id}`}
               className="border rounded-xl px-4 py-3 bg-neutral-50 shadow-md shadow-neutral-200"
               key={service.id}
             >
@@ -92,7 +93,7 @@ export default function Home() {
                   <MingcuteGithub2Fill scope={30} />
                 </Link>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </StyledMain>
