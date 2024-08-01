@@ -2,17 +2,6 @@ import Link from "next/link";
 import { MdiWeb, MingcuteGithub2Fill } from "../components/Icons";
 import { services } from "../data/service";
 
-// const WithGradient = styled.div`
-//   background-image: url("/main-banner.png");
-//   background-size: cover;
-//   padding: 9rem 0 5rem 6rem;
-//   color: white;
-//   margin-bottom: 4rem;
-//   box-shadow: 0 20px 10px #aaaaaa3b;
-//   display: flex;
-//   flex-direction: column;
-// `;
-
 export async function generateStaticParams() {
   return services.map((service) => ({
     id: service.id,
@@ -24,7 +13,16 @@ export default function Page({ params }: { params: { id: string } }) {
 
   return (
     <main>
-      <div>
+      <div style={{
+        "backgroundImage": "url('/main-banner.png')",
+        "backgroundSize": "cover",
+        "padding": "9rem 0 5rem 6rem",
+        "color": "white",
+        "marginBottom": "4rem",
+        "boxShadow": "0 20px 10px #aaaaaa3b",
+        "display": "flex",
+        "flexDirection": "column",
+      }}>
         <h1 className="text-3xl font-semibold">{service?.name}</h1>
         <h2 className="text-lg">{service?.description}</h2>
         {service?.siteUrl && service.githubUrl && (
