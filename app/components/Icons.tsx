@@ -1,3 +1,59 @@
+export function TablerExternalLink({ scope }: { scope: number }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={scope * 1}
+      height={scope * 1}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"
+      ></path>
+    </svg>
+  );
+}
+
+export function IcRoundLink({ scope }: { scope: number }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={scope * 1}
+      height={scope * 1}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5m-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1m2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1"
+      ></path>
+    </svg>
+  );
+}
+
+export function MaterialSymbolsArrowLeftAltRounded({
+  scope,
+}: {
+  scope: number;
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={scope * 1}
+      height={scope * 1}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="m7.85 13l2.85 2.85q.3.3.288.7t-.288.7q-.3.3-.712.313t-.713-.288L4.7 12.7q-.3-.3-.3-.7t.3-.7l4.575-4.575q.3-.3.713-.287t.712.312q.275.3.288.7t-.288.7L7.85 11H19q.425 0 .713.288T20 12t-.288.713T19 13z"
+      ></path>
+    </svg>
+  );
+}
+
 export function SearchStatusIcon({ scope }: { scope: number }) {
   return (
     <svg

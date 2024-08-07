@@ -1,6 +1,10 @@
-import Link from "next/link";
-import { MdiWeb, MingcuteGithub2Fill } from "../components/Icons";
-import { services } from "../data/service";
+import Link from 'next/link';
+import {
+  MaterialSymbolsArrowLeftAltRounded,
+  MdiWeb,
+  MingcuteGithub2Fill,
+} from '../components/Icons';
+import { services } from '../data/service';
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -13,19 +17,24 @@ export default function Page({ params }: { params: { id: string } }) {
 
   return (
     <main>
-      <div style={{
-        "backgroundImage": "url('/main-banner.png')",
-        "backgroundSize": "cover",
-        "padding": "9rem 0 5rem 6rem",
-        "color": "white",
-        "marginBottom": "4rem",
-        "boxShadow": "0 20px 10px #aaaaaa3b",
-        "display": "flex",
-        "flexDirection": "column",
-      }}>
-        <h1 className="text-3xl font-semibold">{service?.name}</h1>
-        <h2 className="text-lg">{service?.description}</h2>
-        {service?.siteUrl && service.githubUrl && (
+      <div
+        style={{
+          backgroundImage: "url('/main-banner.png')",
+          backgroundSize: 'cover',
+          padding: '6rem 0 5rem 6rem',
+          color: 'white',
+          marginBottom: '4rem',
+          boxShadow: '0 20px 10px #aaaaaa3b',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <Link href={'/'}>
+          <MaterialSymbolsArrowLeftAltRounded scope={30} />
+        </Link>
+        <div className="mt-5">
+          <h1 className="text-3xl font-semibold">{service?.name}</h1>
+          <h2 className="text-lg">{service?.description}</h2>
           <div className="flex gap-x-2 mt-3">
             <Link href={service?.siteUrl!}>
               <MdiWeb scope={30} />
@@ -34,7 +43,7 @@ export default function Page({ params }: { params: { id: string } }) {
               <MingcuteGithub2Fill scope={30} />
             </Link>
           </div>
-        )}
+        </div>
       </div>
       <div className="ml-[6rem]">
         <p>{service?.details.detailDescription}</p>
