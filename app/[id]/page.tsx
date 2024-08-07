@@ -6,6 +6,23 @@ import {
 } from '../components/Icons';
 import { services } from '../data/service';
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const service = services.find((service) => service.id == params.id);
+
+  return {
+    title: `GSMAN | ${service ? service.name : 'Project'}`,
+    description: service?.description,
+    openGraph: {
+      title: `GSMAN | ${service?.name}`,
+      description: service?.description,
+      url: `https://gsm.fodo.dev/${service?.id}`,
+      siteName: 'GSMAN',
+      locale: 'ko_KR',
+      type: 'website',
+    },
+  };
+}
+
 export async function generateStaticParams() {
   return services.map((service) => ({
     id: service.id,
@@ -54,7 +71,7 @@ export default function Page({ params }: { params: { id: string } }) {
               href={link.link}
               className="border-b border-b-neutral-800"
             >
-              <p>{link.name}</p>
+              {link.name}
             </Link>
           ))}
         </div>
