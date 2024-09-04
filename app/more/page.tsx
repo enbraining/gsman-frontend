@@ -22,7 +22,6 @@ export default function Page() {
           href="https://www.dotori-gsm.com"
           detailHref="/dotori"
           imageHref="/dotori.png"
-          width={240}
         />
         <Service
           title="GOMS"
@@ -30,7 +29,6 @@ export default function Page() {
           href="https://play.google.com/store/apps/details?id=com.goms.presentation&hl=en-KR"
           detailHref="/dotori"
           imageHref="/goms.png"
-          width={320}
           position="ping"
         />
         <Service
@@ -40,7 +38,6 @@ export default function Page() {
           detailHref="/dotori"
           position="center"
           imageHref="/hi.png"
-          width={200}
         />
       </div>
     </StyledMain>
