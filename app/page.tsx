@@ -15,7 +15,6 @@ export default function Home() {
           href="https://www.dotori-gsm.com"
           detailHref="/dotori"
           imageHref="/dotori.png"
-          width={240}
         />
         <Service
           title="GOMS"
@@ -23,7 +22,6 @@ export default function Home() {
           href="https://play.google.com/store/apps/details?id=com.goms.presentation&hl=en-KR"
           detailHref="/dotori"
           imageHref="/goms.png"
-          width={320}
           position="ping"
         />
         <Service
@@ -33,7 +31,6 @@ export default function Home() {
           detailHref="/dotori"
           position="center"
           imageHref="/hi.png"
-          width={200}
         />
         <StyledInfo>
           <div className="w-full h-full grid grid-cols-2">

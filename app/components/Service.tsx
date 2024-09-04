@@ -52,7 +52,6 @@ export default function Service({
   href,
   detailHref,
   imageHref,
-  width,
   position,
 }: {
   title: string;
@@ -60,7 +59,6 @@ export default function Service({
   href: string;
   detailHref?: string;
   imageHref?: string;
-  width: number;
   position?: 'left' | 'ping' | 'center';
 }) {
   return (
@@ -83,8 +81,8 @@ export default function Service({
               } absolute left-[-30px] bottom-7 duration-700`}
               src={imageHref!}
               alt="dotori logo"
-              width={width}
-              height={width}
+              width={240}
+              height={240}
             />
           )}
         </div>
