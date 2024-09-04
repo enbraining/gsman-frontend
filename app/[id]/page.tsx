@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {
   MaterialSymbolsArrowLeftAltRounded,
   MdiWeb,
-  MingcuteGithub2Fill,
+  TablerBrandGithubFilled,
 } from '../components/Icons';
 import { services } from '../data/service';
 
@@ -57,7 +57,7 @@ export default function Page({ params }: { params: { id: string } }) {
               <MdiWeb scope={30} />
             </Link>
             <Link href={service?.githubUrl!}>
-              <MingcuteGithub2Fill scope={30} />
+              <TablerBrandGithubFilled scope={30} />
             </Link>
           </div>
         </div>
