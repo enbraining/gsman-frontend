@@ -41,7 +41,7 @@ const StyledService = styled.div`
   }
 
   :hover img {
-    left: 100px;
+    left: 110px;
     width: 18rem;
   }
 `;
@@ -76,13 +76,13 @@ export default function Service({
           </ServiceTitle>
           {imageHref && (
             <Image
-              className={`${position == 'ping' && 'left-[-140px]'} ${
+              className={`${position == 'ping' && 'left-[-110px]'} ${
                 position == 'center' && 'left-[20%]'
               } absolute left-[-30px] bottom-7 duration-700`}
               src={imageHref!}
               alt="dotori logo"
-              width={240}
-              height={240}
+              width={220}
+              height={220}
             />
           )}
         </div>
