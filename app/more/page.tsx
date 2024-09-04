@@ -10,7 +10,7 @@ export default function Page() {
       <div className="m-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
         {services.map((service) => (
           <Service
-            width={240}
+            key={service.id}
             title={service.name}
             subTitle={service.description}
             href={service.siteUrl}
