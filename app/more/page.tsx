@@ -1,27 +1,60 @@
 'use client';
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useCallback, useState } from 'react';
-import { TablerExternalLink } from '../components/Icons';
+import Service from '../components/Service';
 import { services } from '../data/service';
+import { StyledMain } from '../styled/main';
 
 export default function Page() {
-  const router = useRouter();
-  const [search, setSearch] = useState<string>('');
-
-  const onInput = useCallback((e: any) => {
-    setSearch(e.target.value);
-  }, []);
-
   return (
-    <div className="grid mx-auto w-5/6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <StyledMain>
+      <div className="m-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        {services.map((service) => (
+          <Service
+            width={240}
+            title={service.name}
+            subTitle={service.description}
+            href={service.siteUrl}
+          />
+        ))}
+        <Service
+          title="Dotori"
+          subTitle="기숙사 통합 관리 서비스"
+          href="https://www.dotori-gsm.com"
+          detailHref="/dotori"
+          imageHref="/dotori.png"
+          width={240}
+        />
+        <Service
+          title="GOMS"
+          subTitle="수요 외출제 관리 서비스"
+          href="https://play.google.com/store/apps/details?id=com.goms.presentation&hl=en-KR"
+          detailHref="/dotori"
+          imageHref="/goms.png"
+          width={320}
+          position="ping"
+        />
+        <Service
+          title="Hi"
+          subTitle="홈베이스 신청 서비스"
+          href="https://msg-hi.vercel.app/"
+          detailHref="/dotori"
+          position="center"
+          imageHref="/hi.png"
+          width={200}
+        />
+      </div>
+    </StyledMain>
+  );
+}
+
+/*
+<div className="grid mx-auto w-5/6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {services
-        .filter((service) =>
-          `${service.name}${service.group}${service.description}`
-            .toLowerCase()
-            .includes(search.toLowerCase()),
-        )
+        // .filter((service) =>
+        //   `${service.name}${service.group}${service.description}`
+        //     .toLowerCase()
+        //     .includes(search.toLowerCase()),
+        // )
         .map((service) => (
           <Link
             href={service.siteUrl}
@@ -53,5 +86,4 @@ export default function Page() {
           </Link>
         ))}
     </div>
-  );
-}
+*/
