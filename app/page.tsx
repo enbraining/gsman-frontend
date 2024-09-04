@@ -3,10 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
-import {
-  StreamlineLinkedinSolid,
-  TablerBrandGithubFilled,
-} from './components/Icons';
+import { NoGsmLogo, TablerBrandGithubFilled } from './components/Icons';
 
 const ServiceTitle = styled.div`
   top: 55%;
@@ -126,11 +123,11 @@ export default function Home() {
               </div>
             </Link>
             <Link
-              href={'https://www.linkedin.com/in/enbraining'}
+              href={'https://no-gsm.com'}
               className="p-2 w-full h-full flex bg-blue-500"
             >
               <div className="m-auto text-white">
-                <StreamlineLinkedinSolid scope={40} />
+                <NoGsmLogo width={90} height={30} />
               </div>
             </Link>
             <Link

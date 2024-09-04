@@ -1,3 +1,52 @@
+export function NoGsmLogo({ width, height }: { width: number, height: number }) {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 460 135"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M73.2113 124.678V135H169.64V88.8176L131.068 103.162V115.714H97.3142L73.2113 124.678Z"
+        fill="black"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M201.034 77.1426H276.097V115.714H218.24V96.4283H179.668V115.714H198.954V135H295.382V115.714H314.668V77.1426H295.382V57.8569H252.894L201.034 77.1426Z"
+        fill="black"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M324.697 31.1548V135H363.268V57.8571H382.554V96.4285H401.84V57.8571H421.125V135H459.697V0H421.125V19.2857H401.84V38.5714H382.554V19.2857H363.268H356.613L324.697 31.1548Z"
+        fill="black"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M328.628 20.8327V4.49585H290.057V35.1767L328.628 20.8327Z"
+        fill="#43AFE5"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M280.028 38.9062V23.7815H260.743V4.49585H164.314V23.7815H145.028V62.3529H164.314V81.6386H165.12L216.98 62.3529H183.6V23.7815H241.457V43.0672H268.839L280.028 38.9062Z"
+        fill="#013366"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M135 92.8398V62.3529H77.1428V81.6386H96.4285V107.184L135 92.8398ZM61.4008 120.21H57.8571V100.924H38.5714V43.0672H57.8571V23.7815H135V4.49585H38.5714V23.7815H19.2857V43.0672H0V100.924H19.2857V120.21H38.5714V128.7L61.4008 120.21Z"
+        fill="#DEE448"
+      />
+    </svg>
+  );
+}
+
 export function MaterialSymbolsLightListsRounded({ scope }: { scope: number }) {
   return (
     <svg
