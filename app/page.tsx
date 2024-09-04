@@ -95,16 +95,16 @@ export default function Home() {
         <Service
           title="Dotori"
           subTitle="기숙사 통합 관리 서비스"
-          href="https://do"
-          detailHref="https://do"
+          href="https://www.dotori-gsm.com"
+          detailHref="/dotori"
           imageHref="/dotori.png"
           width={240}
         />
         <Service
           title="GOMS"
           subTitle="수요 외출제 관리 서비스"
-          href="https://do"
-          detailHref="https://do"
+          href="https://play.google.com/store/apps/details?id=com.goms.presentation&hl=en-KR"
+          detailHref="/dotori"
           imageHref="/goms.png"
           width={320}
           position="ping"
@@ -112,8 +112,8 @@ export default function Home() {
         <Service
           title="Hi"
           subTitle="홈베이스 신청 서비스"
-          href="https://do"
-          detailHref="https://do"
+          href="https://msg-hi.vercel.app/"
+          detailHref="/dotori"
           position="center"
           imageHref="/hi.png"
           width={200}
@@ -217,7 +217,7 @@ function Service({
           </ServiceTitle>
           {imageHref && (
             <Image
-              className={`${position == 'ping' && 'left-[-150px]'} ${
+              className={`${position == 'ping' && 'left-[-140px]'} ${
                 position == 'center' && 'left-[20%]'
               } absolute left-[-30px] bottom-7 duration-700`}
               src={imageHref!}
