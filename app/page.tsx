@@ -3,6 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
+import {
+  StreamlineLinkedinSolid,
+  TablerBrandGithubFilled,
+} from './components/Icons';
 
 const ServiceTitle = styled.div`
   top: 55%;
@@ -34,7 +38,6 @@ const StyledService = styled.div`
   }
 
   :hover {
-    padding: 3.5rem;
     --tw-shadow: 0 25px 50px -12px rgb(255 255 255 / 0.625);
     --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #ffff),
@@ -47,23 +50,31 @@ const StyledService = styled.div`
   }
 `;
 
-const WithGradient = styled.div`
-  background-image: url('/main-banner.png');
-  background-size: cover;
-  padding: 5rem 0;
-  color: white;
-  margin-bottom: 4rem;
-  text-align: center;
-  box-shadow: 0 20px 10px #aaaaaa3b;
+const StyledInfo = styled.div`
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: black;
+  background-color: white;
+  transition-duration: 300ms;
+  width: 16rem;
+  height: 18rem;
+  border-radius: 1rem;
+
+  .details {
+    transition-duration: 300ms;
+    opacity: 0;
+  }
+
+  :hover img {
+    left: 100px;
+    width: 18rem;
+  }
 `;
 
 const StyledMain = styled.main`
   display: flex;
   min-height: 100vh;
-  /* background-image: url('/main-banner.png'); */
   background-color: black;
   background-size: cover;
   padding: 5rem 0;
@@ -72,20 +83,6 @@ const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const StyledInput = styled.input`
-  background-color: #00000000;
-  color: white;
-  outline: none;
-  border-bottom: 2px solid #ffffff;
-`;
-
-const SearchContainer = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
 `;
 
 export default function Home() {
@@ -118,69 +115,36 @@ export default function Home() {
           imageHref="/hi.png"
           width={200}
         />
-        <Service
-          title="더보기"
-          subTitle="다른 프로젝트도 궁금하신가요?"
-          href="/more"
-          width={240}
-        />
-      </div>
-      {/* <WithGradient>
-        <div className="mb-2">
-          <MingcuteGithub2Fill scope={22} />
-        </div>
-        <h1 className="text-3xl font-semibold">GSMAN</h1>
-        <p>소마고 프로젝트 모음</p>
-        <SearchContainer>
-          <StyledInput
-            onInput={onInput}
-            className="p-2 sm:w-[25rem] w-[20rem] text-white"
-          />
-          <div className="absolute right-2">
-            <SearchStatusIcon scope={25} />
-          </div>
-        </SearchContainer>
-      </WithGradient>
-      <div className="grid mx-auto w-5/6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {services
-          .filter((service) =>
-            `${service.name}${service.group}${service.description}`
-              .toLowerCase()
-              .includes(search.toLowerCase()),
-          )
-          .map((service) => (
+        <StyledInfo>
+          <div className="w-full h-full grid grid-cols-2">
             <Link
-              href={service.siteUrl}
-              className="border rounded-xl px-4 py-3 bg-neutral-50 shadow-md shadow-neutral-200"
-              key={service.id}
+              href={'https://github.com/enbraining'}
+              className="p-2 w-full h-full flex bg-slate-700"
             >
-              <div className="flex">
-                <div>
-                  <div className="flex items-end gap-x-1">
-                    <h1 className="font-semibold text-2xl text-neutral-700">
-                      {service.name}
-                    </h1>
-                    <h1 className=" text-lg font-semibold text-neutral-500">
-                      {'by ' + service.group}
-                    </h1>
-                  </div>
-                  <h2 className="text-neutral-600 mb-2">
-                    {service.description}
-                  </h2>
-                  <Link
-                    href={service.id}
-                    className="inline duration-300 border-dashed border-b border-b-neutral-300 text-neutral-700 hover:border-b-neutral-600"
-                  >
-                    프로젝트 정보
-                  </Link>
-                </div>
-                <div className="ml-auto">
-                  <TablerExternalLink scope={22} />
-                </div>
+              <div className="m-auto text-white">
+                <TablerBrandGithubFilled scope={40} />
               </div>
             </Link>
-          ))}
-      </div>*/}
+            <Link
+              href={'https://www.linkedin.com/in/enbraining'}
+              className="p-2 w-full h-full flex bg-blue-500"
+            >
+              <div className="m-auto text-white">
+                <StreamlineLinkedinSolid scope={40} />
+              </div>
+            </Link>
+            <Link
+              href={'/more'}
+              className="p-2 w-full h-full flex bg-slate-600 col-span-2"
+            >
+              <div className="m-auto flex items-center gap-x-2 hover:gap-x-6 duration-300 font-semibold text-xl text-slate-100">
+                <p>더 많은 프로젝트</p>
+                <p>→</p>
+              </div>
+            </Link>
+          </div>
+        </StyledInfo>
+      </div>
     </StyledMain>
   );
 }
