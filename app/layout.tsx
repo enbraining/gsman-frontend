@@ -8,7 +8,7 @@ const inter = LocalFont({
 
 export const metadata: Metadata = {
   title: 'GSMAN',
-  description: '소프트웨어마이스터고 프로젝트 리스트',
+  description: '광주소프트웨어마이스터고 프로젝트 리스트',
 };
 
 export default function RootLayout({
